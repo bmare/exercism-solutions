@@ -1,0 +1,3 @@
+{
+  "bank_account_test.py::BankAccountTest::test_can_handle_concurrent_transactions": true
+}

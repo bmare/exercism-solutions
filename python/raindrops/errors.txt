@@ -1,0 +1,394 @@
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.15+, pytest-3.3.2, py-1.5.2, pluggy-0.6.0
+rootdir: /home/bronyslav/exercism/python/raindrops, inifile:
+collected 18 items
+
+raindrops_test.py F..F..F......F....                                     [100%]
+
+=================================== FAILURES ===================================
+___________ RaindropsTest.test_2_to_the_power_3_does_not_make_sound ____________
+
+self = <raindrops_test.RaindropsTest testMethod=test_2_to_the_power_3_does_not_make_sound>
+
+    def test_2_to_the_power_3_does_not_make_sound(self):
+>       self.assertEqual(convert(8), "8")
+E       AssertionError: '' != '8'
+
+raindrops_test.py:25: AssertionError
+_______________ RaindropsTest.test_the_sound_for_12121_is_12121 ________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_12121_is_12121>
+
+    def test_the_sound_for_12121_is_12121(self):
+>       self.assertEqual(convert(12121), "12121")
+E       AssertionError: '' != '12121'
+
+raindrops_test.py:61: AssertionError
+___________________ RaindropsTest.test_the_sound_for_1_is_1 ____________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_1_is_1>
+
+    def test_the_sound_for_1_is_1(self):
+>       self.assertEqual(convert(1), "1")
+E       AssertionError: '' != '1'
+
+raindrops_test.py:10: AssertionError
+__________________ RaindropsTest.test_the_sound_for_52_is_52 ___________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_52_is_52>
+
+    def test_the_sound_for_52_is_52(self):
+>       self.assertEqual(convert(52), "52")
+E       AssertionError: '' != '52'
+
+raindrops_test.py:55: AssertionError
+===================== 4 failed, 14 passed in 0.04 seconds ======================
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.15+, pytest-3.3.2, py-1.5.2, pluggy-0.6.0
+rootdir: /home/bronyslav/exercism/python/raindrops, inifile:
+collected 18 items
+
+raindrops_test.py F.FFFFFFFFFFFFFFFF                                     [100%]
+
+=================================== FAILURES ===================================
+___________ RaindropsTest.test_2_to_the_power_3_does_not_make_sound ____________
+
+self = <raindrops_test.RaindropsTest testMethod=test_2_to_the_power_3_does_not_make_sound>
+
+    def test_2_to_the_power_3_does_not_make_sound(self):
+>       self.assertEqual(convert(8), "8")
+
+raindrops_test.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 8
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_10_is_plang _________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_10_is_plang>
+
+    def test_the_sound_for_10_is_plang(self):
+>       self.assertEqual(convert(10), "Plang")
+
+raindrops_test.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 10
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_______________ RaindropsTest.test_the_sound_for_12121_is_12121 ________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_12121_is_12121>
+
+    def test_the_sound_for_12121_is_12121(self):
+>       self.assertEqual(convert(12121), "12121")
+
+raindrops_test.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 12121
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_14_is_plong _________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_14_is_plong>
+
+    def test_the_sound_for_14_is_plong(self):
+>       self.assertEqual(convert(14), "Plong")
+
+raindrops_test.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 14
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+______________ RaindropsTest.test_the_sound_for_15_is_plingplang _______________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_15_is_plingplang>
+
+    def test_the_sound_for_15_is_plingplang(self):
+>       self.assertEqual(convert(15), "PlingPlang")
+
+raindrops_test.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 15
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 2: expected string, int found
+
+raindrops.py:5: TypeError
+___________________ RaindropsTest.test_the_sound_for_1_is_1 ____________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_1_is_1>
+
+    def test_the_sound_for_1_is_1(self):
+>       self.assertEqual(convert(1), "1")
+
+raindrops_test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 1
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+______________ RaindropsTest.test_the_sound_for_21_is_plingplong _______________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_21_is_plingplong>
+
+    def test_the_sound_for_21_is_plingplong(self):
+>       self.assertEqual(convert(21), "PlingPlong")
+
+raindrops_test.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 21
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 1: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_25_is_plang _________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_25_is_plang>
+
+    def test_the_sound_for_25_is_plang(self):
+>       self.assertEqual(convert(25), "Plang")
+
+raindrops_test.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 25
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_27_is_pling _________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_27_is_pling>
+
+    def test_the_sound_for_27_is_pling(self):
+>       self.assertEqual(convert(27), "Pling")
+
+raindrops_test.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 27
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 1: expected string, int found
+
+raindrops.py:5: TypeError
+______________ RaindropsTest.test_the_sound_for_35_is_plangplong _______________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_35_is_plangplong>
+
+    def test_the_sound_for_35_is_plangplong(self):
+>       self.assertEqual(convert(35), "PlangPlong")
+
+raindrops_test.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 35
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_3_is_pling __________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_3_is_pling>
+
+    def test_the_sound_for_3_is_pling(self):
+>       self.assertEqual(convert(3), "Pling")
+
+raindrops_test.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 3
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 1: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_49_is_plong _________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_49_is_plong>
+
+    def test_the_sound_for_49_is_plong(self):
+>       self.assertEqual(convert(49), "Plong")
+
+raindrops_test.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 49
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+__________________ RaindropsTest.test_the_sound_for_52_is_52 ___________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_52_is_52>
+
+    def test_the_sound_for_52_is_52(self):
+>       self.assertEqual(convert(52), "52")
+
+raindrops_test.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 52
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_5_is_plang __________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_5_is_plang>
+
+    def test_the_sound_for_5_is_plang(self):
+>       self.assertEqual(convert(5), "Plang")
+
+raindrops_test.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 5
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_6_is_pling __________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_6_is_pling>
+
+    def test_the_sound_for_6_is_pling(self):
+>       self.assertEqual(convert(6), "Pling")
+
+raindrops_test.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 6
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 1: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_7_is_plong __________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_7_is_plong>
+
+    def test_the_sound_for_7_is_plong(self):
+>       self.assertEqual(convert(7), "Plong")
+
+raindrops_test.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 7
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 0: expected string, int found
+
+raindrops.py:5: TypeError
+_________________ RaindropsTest.test_the_sound_for_9_is_pling __________________
+
+self = <raindrops_test.RaindropsTest testMethod=test_the_sound_for_9_is_pling>
+
+    def test_the_sound_for_9_is_pling(self):
+>       self.assertEqual(convert(9), "Pling")
+
+raindrops_test.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 9
+
+    def convert(number):
+        factors=[3,5,7]
+        drops=["Pling", "Plang", "Plong"]
+        drop=[drops[fac] if number % factors[fac] == 0 else number for fac in range(len(factors)) ]
+>       return ''.join(drop)
+E       TypeError: sequence item 1: expected string, int found
+
+raindrops.py:5: TypeError
+===================== 17 failed, 1 passed in 0.07 seconds ======================

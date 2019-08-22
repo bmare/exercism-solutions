@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+main() {
+        alphabet="abcdefghijklmnopqrstuvwxyz"
+        if [[ -z "$1" ]]; then
+                echo "false"
+        else
+                for (( i=0 ; i  < 25 ; i++ )) ; do
+                        if [[ "${1}"  != *"${alphabet:i:1}"* ]] ; then
+                                echo "false"
+                                break
+                        fi
+                done
+                echo "true"
+        fi
+}
+main "$@"
