@@ -1,0 +1,5 @@
+{
+  "word_count_test.py::WordCountTest::test_alternating_word_separators_not_detected_as_a_word": true,
+  "word_count_test.py::WordCountTest::test_handles_cramped_lists": true,
+  "word_count_test.py::WordCountTest::test_non_alphanumeric": true
+}
